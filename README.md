@@ -16,6 +16,6 @@
 
 
 #### Note: 
-As the data is not available, it is not possible to fully replicate the exact experiments from the article with the same data. The aim of releasing this materials and code is to allow code inspection and make setting up similar experiments with other data more accessible. Using (elements of) the code for your own data does require some familiarity with Python (v. 3). The list of python packages required to run the code can be found in the requirements.txt file.
+As the data is not shareable, it is not possible to fully replicate the exact experiments from the article with the same data. The aim of releasing this materials and code is to allow code inspection and make setting up similar experiments with other data more accessible. Using (elements of) the code for your own data does require some familiarity with Python (v. 3). The list of python packages required to run the code can be found in the requirements.txt file.
 
 #### Questions? Feel free to email!
