@@ -4,7 +4,7 @@
 
 
 #### This directory contains:
-- The code used to conduct the experiments.
+- The code used to conduct the experiments to compare different prediction modeling methods in settings with different levels of collinearity among predictors.
 
 #### For patient privacy reasons, it does NOT contain:
 - The data used to setup the simulations.
