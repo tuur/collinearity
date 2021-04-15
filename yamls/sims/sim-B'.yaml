@@ -1,0 +1,59 @@
+# Experiment Name
+exp_name: "sim-B'" #xe34
+
+# Output
+output_dir: "/hpc/shared/julius_te/tleeuwenberg/collin-out/sims-out/"
+
+# Models
+models: ['LR','Lasso','Ridge','ElasticNet','PCLR','LAELR','Dropout','LRnn']
+
+# Data
+data_path: "/home/julius_te/tleeuwenberg/data/CITOR.data.encr"
+data_val_max_size: 0 #
+
+data_dev_max_size: 1000 # 10000 # use only n patients from the development data set for development
+data_dev_included: {ZIEKH:[3]} # UMCG  (ZIEKENH 1=RIF, 2=MAASTRO, 3=UMCG)
+data_val_included: {ZIEKH:[2]} # MAASTRO
+
+# Simulate or not?
+simulate: True # <<<<<<<<<<<<<<<<<<<<<<<<< SIM
+sim_target_vif: 0
+sim_target_gt_AUROC: 0 # target separation / overlap between outcomes (expressed as area under the receiver operator curve).
+sim_base_model: 'Ridge' 
+sim_train_size: 592
+sim_test_size: 10000 # recommended to opt for 10000 or more
+
+# Hyperparameter Grid Search
+hypps_n_search_folds: 3
+hypps_dropout_grid: [.1,.2,.3,.4,.5]
+hypps_regularization_grid: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0] # candidate parameters for inverse weights for Lasso / Ridge / etc.
+hypps_latent_component_grid: [4, 8, 12, 16]
+hypps_n_jobs: 1
+hypps_n_bo_iters: 20
+
+# Other Hyperparameters
+hypps_eval_cv_folds: 5
+
+# Predictors (indicated by a list of regular expressions)
+preds_continuous: ["AGE", "Submandibular_L_Dmean", "Submandibular_L_V10", "Submandibular_L_V30", "Submandibular_L_V50", "Submandibular_R_Dmean", "Submandibular_R_V10", "Submandibular_R_V30", "Submandibular_R_V50", "Parotid_L_Dmean", "Parotid_L_V10", "Parotid_L_V30", "Parotid_L_V50", "Parotid_R_Dmean", "Parotid_R_V10", "Parotid_R_V30", "Parotid_R_V50"]
+
+preds_boolean: {XER_BSL: [1,2,3]} 
+
+# Coefficient Constraints
+preds_nonneg: ["Submandibular_L_Dmean", "Submandibular_L_V10", "Submandibular_L_V20", "Submandibular_L_V30", "Submandibular_L_V40", "Submandibular_L_V50", "Submandibular_L_V60", "Submandibular_L_V70", "Submandibular_R_Dmean", "Submandibular_R_V10", "Submandibular_R_V20", "Submandibular_R_V30", "Submandibular_R_V40", "Submandibular_R_V50", "Submandibular_R_V60", "Submandibular_R_V70", "Parotid_L_Dmean", "Parotid_L_V10", "Parotid_L_V20", "Parotid_L_V30", "Parotid_L_V40", "Parotid_L_V50", "Parotid_L_V60", "Parotid_L_V70", "Parotid_R_Dmean", "Parotid_R_V10", "Parotid_R_V20", "Parotid_R_V30", "Parotid_R_V40", "Parotid_R_V50", "Parotid_R_V60", "Parotid_R_V70"]
+preds_coef_order: [] 
+
+# Outcome
+outcome_var_name: "XER_M06"
+outcome_positive_values: [3,4,5] # grade 2 or higher (Gr. 0 is coded as 1, Gr. 1 as 2 etc)
+
+# Preprocessing
+preproc_zero_mean: True
+preproc_unit_variance: True
+mice_imputations: 3
+
+# Logging
+log_verbose: 0
+log_include_data_description_bs0: True
+log_vars_in_data_description: ['AGE','GESLACHT','ROKEN', 'GESLACHT','MODALITY','LOCTUM_cat','XER_BSL','ZIEKH']
+log_include_pairplot: False # (takes a while)
