@@ -4,7 +4,7 @@
 
 
 #### Preprint
-This repository corresponds to the experiment and results reported in the preprint article at https://arxiv.org/abs/2101.01603
+This repository corresponds to the experiments and results reported in the preprint article at https://arxiv.org/abs/2101.01603
 
 #### This directory contains:
 - The code used to conduct the experiments to compare different prediction modeling methods in settings with different levels of collinearity among predictors.
