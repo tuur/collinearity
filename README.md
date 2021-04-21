@@ -3,11 +3,11 @@
 ###### Email: aleeuw15@umcutrecht.nl
 
 
+#### Preprint
+This repository corresponds to the experiment and results reported in the preprint article at https://arxiv.org/abs/2101.01603
+
 #### This directory contains:
 - The code used to conduct the experiments to compare different prediction modeling methods in settings with different levels of collinearity among predictors.
-
-#### Preprint
-A preprint article describing the experiments and results in detail can be found at: https://arxiv.org/abs/2101.01603
 
 #### For patient privacy reasons, it does NOT contain:
 - The data used to setup the simulations.
