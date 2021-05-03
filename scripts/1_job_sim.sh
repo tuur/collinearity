@@ -5,7 +5,7 @@ export PYTHONPATH="/home/julius_te/tleeuwenberg/code/ntcp-collinearity"
 
 
 PYTHON_SCRIPT="/home/julius_te/tleeuwenberg/code/ntcp-collinearity/exps/compare_methods_citor.py"
-PWD=7115
+PWD="TBA"
 BS=$SLURM_ARRAY_TASK_ID
 
 YAML_PATH="/home/julius_te/tleeuwenberg/yamls/sims/sim-A.yaml" 
