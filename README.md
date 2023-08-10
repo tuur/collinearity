@@ -3,8 +3,10 @@
 ###### Email: aleeuw15@umcutrecht.nl
 
 
-#### Preprint
-This repository corresponds to the experiments and results reported in the preprint article at https://arxiv.org/abs/2101.01603
+#### Article
+This repository corresponds to the experiments and results reported in the following article:
+
+> Leeuwenberg, Artuur M., et al. [Performance of binary prediction models in high-correlation low-dimensional settings: a comparison of methods.](https://doi.org/10.1186/s41512-021-00115-5) Diagnostic and prognostic research 6.1 (2022): 1.
 
 #### This directory contains:
 - The code used to conduct the experiments to compare different prediction modeling methods in settings with different levels of collinearity among predictors.
